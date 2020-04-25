@@ -173,8 +173,11 @@ describe('Cart Context', () => {
     );
 
     await act(async () => {
+      console.log('add-to-cart');
       fireEvent.press(getByTestId('add-to-cart'));
+      console.log('increment');
       fireEvent.press(getByTestId('increment'));
+      console.log('decrement');
       fireEvent.press(getByTestId('decrement'));
     });
 
